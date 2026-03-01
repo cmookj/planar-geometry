@@ -6,10 +6,6 @@ cc_binary(
   deps = [
     "//core:core",
   ],
-  copts = select({
-    "@bazel_tools//src/conditions:windows": ["/std:c++20"],
-    "//conditions:default": ["-std=c++20"],
-  }),
 )
 
 cc_binary(
@@ -18,8 +14,4 @@ cc_binary(
   deps = [
     "//core:core",
   ],
-  copts = select({
-    "@bazel_tools//src/conditions:windows": ["/std:c++20"],
-    "//conditions:default": ["-std=c++20"],
-  }),
 )

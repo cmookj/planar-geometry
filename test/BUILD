@@ -5,10 +5,6 @@ load("@rules_cc//cc:cc_library.bzl", "cc_library")
 #     name = "random_gen",
 #     hdrs = ["random_gen.h"],
 #     visibility = ["//visibility:public"],
-#     copts = select({
-#         "@bazel_tools//src/conditions:windows": ["/std:c++20"],
-#         "//conditions:default": ["-std=c++20"],
-#     }),
 # )
 
 cc_test(
@@ -21,9 +17,5 @@ cc_test(
         "//core:core",
  #       "//test:random_gen",
     ],
-    copts = select({
-        "@bazel_tools//src/conditions:windows": ["/std:c++20"],
-        "//conditions:default": ["-std=c++20"],
-    }),
 )
 
